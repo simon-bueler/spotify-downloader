@@ -117,10 +117,15 @@ Initially no branch was not covered, now with the new parameters added to the ma
 
 ### Overall
 
-<Provide a screenshot of the old coverage results by running an existing tool (the same as you already showed above)>
+Old coverage:
 
-<Provide a screenshot of the new coverage results by running the existing tool using all test modifications made by the group>
+![alt text](image.png)
+
+New coverage after modifications:
+
+![alt text](cov-after.png)
+
 
 ## Statement of individual contributions
 
-<Write what each group member did>
+Ongun Manav: Contributed in the resolution of finding an eligible repo which initially was our biggest issue. Created branch testing for the functions get_status() and format() in the files github.py and logging.py respectively. Enhanced the tests for both functions by creating a new test case for get_status() and expanding the input_output_map in the existing test for format().
