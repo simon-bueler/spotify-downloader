@@ -50,7 +50,6 @@ format()
 
 ![alt text](ongun-img7.png)
 
-
 ## Coverage improvement
 
 ### Individual tests
@@ -109,7 +108,8 @@ New coverage after modifications:
 
 ![alt text](cov-after.png)
 
-
 ## Statement of individual contributions
 
 Ongun Manav: Contributed in the resolution of finding an eligible repo which initially was our biggest issue. Created branch testing for the functions get_status() and format() in the files github.py and logging.py respectively. Enhanced the tests for both functions by creating a new test case for get_status() and expanding the input_output_map in the existing test for format().
+
+Erik Doytchinov: Contributed in finding a eligible repo, setup and forked it, and figured out how dependencies and project structure works. Then created a instrumentation file that provides us with a tool that is expendable and is base template for our coverage needs. yt_dlp_progress_hook(), notify_error() were the two function functions I provided instrumentation and enhanced coverage results.
