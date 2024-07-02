@@ -393,6 +393,7 @@ from tests.conftest import new_initialize
         ),
     ],
 )
+@pytest.mark.vcr()
 def test_ytmusic_matching(monkeypatch, query, expected):
     monkeypatch.setattr(SpotifyClient, "init", new_initialize)
 
