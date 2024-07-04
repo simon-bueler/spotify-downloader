@@ -101,14 +101,18 @@ def test_get_local_ffmpeg(monkeypatch):
         assert str(local_ffmpeg).endswith("ffmpeg.exe")
 
 
-def test_download_ffmpeg(monkeypatch, tmpdir):
-    """
-    Test download_ffmpeg function.
-    """
-
-    monkeypatch.setattr(spotdl.utils.ffmpeg, "get_spotdl_path", lambda *_: tmpdir)
-
-    assert download_ffmpeg() is not None
+# This can't be run with pytest --block-network without writing a 110M cassette
+# effectively containing the entire ffmpeg binary.
+# Commenting it out is a stopgap measure until we figure out how to skip it in
+# such cases.
+#def test_download_ffmpeg(monkeypatch, tmpdir):
+#    """
+#    Test download_ffmpeg function.
+#    """
+#
+#    monkeypatch.setattr(spotdl.utils.ffmpeg, "get_spotdl_path", lambda *_: tmpdir)
+#
+#    assert download_ffmpeg() is not None
 
 
 @pytest.mark.vcr()
