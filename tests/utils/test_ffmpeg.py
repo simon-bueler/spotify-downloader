@@ -116,6 +116,7 @@ def test_get_local_ffmpeg(monkeypatch):
 
 
 @pytest.mark.vcr()
+@pytest.mark.vcr_delete_on_fail
 def test_convert(tmpdir, monkeypatch):
     """
     Test convert function.
